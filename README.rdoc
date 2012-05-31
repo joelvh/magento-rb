@@ -1,6 +1,20 @@
 = magento-rb
 
-Description goes here.
+Use Magento's XMLRPC API like this:
+
+    require "magento-rb"
+    xml_api = Magento::XmlApi.new "http://localhost/magento", "username", "api_key", :debug => true
+    
+    # Pass in the XMLRPC method name and ID parameter as arguments
+    response = xml_api.call("sales_order.info", "123")
+    
+    # Call XMLRPC methods on xml_api directly
+    response = xml_api.sales_order_info("123")
+    
+    # Create a new customer
+    customer_id = xml_api.customer_create(:email => email)
+
+The SOAP API v2 has a similar interface, but it is about 3x slower than XMLRPC and responses are more verbose.
 
 == Contributing to magento-rb
  
