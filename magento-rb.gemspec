@@ -25,6 +25,9 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/magento-rb.rb",
+    "lib/magento/savon.rb",
+    "lib/magento/soap_api_v2.rb",
+    "lib/magento/xml_api.rb",
     "magento-rb.gemspec",
     "test/helper.rb",
     "test/test_magento-rb.rb"
