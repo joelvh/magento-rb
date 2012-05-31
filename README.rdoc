@@ -26,6 +26,16 @@ The SOAP API v2 has a similar interface, but it is about 3x slower than XMLRPC a
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
+== Thanks
+
+Thanks to Guewen Baconnier for his quick start in XMLRPC for Magento:
+
+https://gist.github.com/1875404
+
+Learned about Savon and some of the basics from here:
+
+http://www.polyvision.org/2011/11/02/using-magento-soap-api-with-ruby-and-savon/
+
 == Copyright
 
 Copyright (c) 2012 Joel Van Horn. See LICENSE.txt for
