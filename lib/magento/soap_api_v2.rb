@@ -1,3 +1,5 @@
+require 'savon'
+
 module Magento
   class SoapApiV2
     extend Savon::Model

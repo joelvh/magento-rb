@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "magento-rb"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Van Horn"]
-  s.date = "2012-05-31"
+  s.date = "2012-06-04"
   s.description = "Magento API libraries and other helpful Ruby code"
   s.email = "joeldvanhorn@gmail.com"
   s.extra_rdoc_files = [
