@@ -73,8 +73,7 @@ module Magento
         request(method, *arguments)
         
       rescue XMLRPC::FaultException => error
-        fault = error.to_h
-        raise "#{fault['faultCode']}: #{fault['faultString']}"
+        raise Magento::ApiError.new(error.faultString, error.faultCode, error)
       end
     end
     
