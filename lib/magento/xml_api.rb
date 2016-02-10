@@ -26,6 +26,8 @@ module Magento
       @url = "#{base_url}/api/xmlrpc/"
       @api_user = api_user
       @api_key = api_key
+      @timeout = options[:timeout] || 60
+      @proxy = options[:proxy] || nil 
       @debug = options[:debug] || false
     end
     
@@ -40,7 +42,7 @@ module Magento
     private
     
     def client
-      @client ||= XMLRPC::Client.new2(@url).tap do |client|
+      @client ||= XMLRPC::Client.new2(@url,@proxy,@timeout).tap do |client|
         http_debug(@debug)
         client.set_debug
       end

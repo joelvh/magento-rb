@@ -3,7 +3,12 @@
 Use Magento's XMLRPC API like this:
 
     require "magento-rb"
-    xml_api = Magento::XmlApi.new "http://localhost/magento", "username", "api_key", :debug => true
+    options = {
+        :debug => true, 
+        :proxy => http://my.host.name:port, 
+        :timeout => 90
+    }
+    xml_api = Magento::XmlApi.new "http://localhost/magento", "username", "api_key", options
     
     # Pass in the XMLRPC method name and ID parameter as arguments
     response = xml_api.call("sales_order.info", "123")
